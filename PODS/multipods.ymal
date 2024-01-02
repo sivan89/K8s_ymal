@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Pod
+metadata: name:Tomcat
+spec:
+  containers:
+    - name: Tomcat
+      image: tomcat:latest
+      ports:
+        - containerPort: 7500
+          imagePullPolicy: Always
+    - name: Database
+      image: mongoDB:latest
+      ports:
+        - containerPort: 7501
+          imagePullPolicy: Always
